@@ -49,7 +49,7 @@ class CompleteMe
 
   def suggest(substring)
     all_words = find_words(substring.chop, end_node_have?(substring))
-    p all_words.unshift(smart_suggest(substring)).flatten.compact.uniq
+    return all_words.unshift(smart_suggest(substring)).flatten.compact.uniq
   end
 
   def end_node_have?(substring)

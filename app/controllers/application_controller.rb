@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
 
   def populate_tree
     @tree = CompleteMe.new
+    dictionary = Word.all.pluck(:text)
+    @tree.populate(dictionary)
   end
 end
